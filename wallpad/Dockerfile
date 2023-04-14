@@ -21,7 +21,7 @@ COPY package.json /
 RUN npm install
 
 #my modify
-WORKDIR /share
+#WORKDIR /share
 
 RUN chmod a+x /run.sh
 
