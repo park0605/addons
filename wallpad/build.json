@@ -1,4 +1,3 @@
-// build.json 
 {
   "squash": false,
   "build_from": {
