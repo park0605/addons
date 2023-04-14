@@ -11,11 +11,12 @@ WORKDIR /share
 RUN apk add --no-cache jq npm make gcc g++ python3 linux-headers udev \
 && npm init -f
 
+WORKDIR /
+COPY package.json /
+RUN npm install
+
 RUN chmod a+x /run.sh
 
 # CMD [ "/run.sh" ]
 ENTRYPOINT [ "/run.sh" ]
 
-WORKDIR /
-COPY package.json /
-RUN npm install
