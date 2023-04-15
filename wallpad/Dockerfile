@@ -6,7 +6,8 @@ ENV LANG C.UTF-8
 COPY run.sh /
 COPY js /js
 
-RUN python3 -m pip install pyserial
+#RUN python3 -m pip install pyserial
+apk add py3-pyserial
 RUN python3 -m pip install paho-mqtt
 
 WORKDIR /share
