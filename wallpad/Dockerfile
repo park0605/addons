@@ -10,7 +10,7 @@ COPY js /js
 
 # Install requirements for add-on
 RUN apk add --no-cache jq npm make gcc g++ python3 linux-headers udev
-
+RUN python3 -m pip install pyserial
 WORKDIR /
 COPY package.json /
 RUN npm install
